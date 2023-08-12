@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Dubai metro fare calculator</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+  <!-- Creating the form -->
+  <div id="mainContainer">
+    <header>
+      <h1> Dubai Metro Fare Calculator </h1>
+         </header>
+    <div id="header-image">
+      </div>
+    <form action="index.html" method="GET">
+      <!-- Starting point input field -->
+      <div id="selectOptions">
+        <p>Your starting point</p>
+      <select class="selectElem" name="starting point" id="starting" required>
+        <option value="Etisalat by E&"> Etisalat by E& </option>
+        <option value="Al Qusais"> Al Qusais </option>
+        <option value="Dubai Airport freezone"> Dubai Airport freezone </option>
+        <option value="Al Nahda"> Al Nahda </option>
+        <option value="Stadium"> Stadium </option>
+        <option value="Al Qiyadah"> Al Qiyadah </option>
+        <option value="Abu Hail"> Abu Hail </option>
+        <option value="Abubakar Al Siddique"> Abubakar Al Siddique </option>
+        <option value="Salahuddin"> Salahuddin </option>
+        <option value="Union"> Union </option>
+        <option value="Center point"> Center point </option>
+        <option value="Emirates"> Emirates </option>
+        <option value="Airport Terminal 3"> Airport Terminal 3 </option>
+        <option value="Airport Terminal 1"> Airport Terminal 1 </option>
+        <option value="GGICO"> GGICO"> </option>
+        <option value="City Center Deira"> City Center Deira </option>
+        <option value="Al Rigga"> Al Rigga </option>
+        <option value="Union"> Union </option>
+        <option value="Baniyas Square"> Baniyas Square </option>
+        <option value="Gold Souk"> Gold Souk </option>
+        <option value="Al Ras"> Al Ras </option>
+        <option value="Creek"> Creek </option>
+        <option value="Jaddaf"> Jaddaf </option>
+        <option value="Healthcare City"> Healthcare City </option>
+        <option value="Oud Metha"> Oud Metha </option>
+        <option value="Burjuman"> Burjuman </option>
+        <option value="ADCB"> ADCB </option>
+        <option value="Max Fashion"> Max Fashion </option>
+        <option value="World Trade Center"> World Trade Center </option>
+        <option value="Emirates Center"> Emirates Center </option>
+        <option value="Financial Center"> Financial Center </option>
+        <option value="Dubai Mall / Burj Khalifa"> Dubai Mall / Burj Khalifa </option>
+        <option value="Business Bay"> Business Bay </option>
+        <option value="Sharaf DG"> Sharaf DG </option>
+        <option value="Al Ghubaiba"> Al Ghubaiba </option>
+        <option value="ONPassive"> ONPassive </option>
+        <option value="Equiti"> Equiti </option>
+        <option value="Mall of the Emirates"> Mall of the Emirates </option>
+        <option value="Mashreq"> Mashreq </option>
+        <option value="Dubai Internet City"> Dubai Internet City </option>
+        <option value="Al Khail"> Al Khail </option>
+        <option value="Sobha Realty"> Sobha Realty </option>
+        <option value="DMCC (JLT)">DMCC (JLT) </option>
+        <option value="Jebel Ali"> Jebel Ali </option>
+        <option value="IBN Batuta"> IBN Batuta </option>
+        <option value="The Gardens"> The Gardens </option>
+        <option value="Expo2020"> Expo2020 </option>
+        <option value="Dubai Investment Park"> Dubai Investment Park </option>
+        <option value="Jumeirah Golf Estates"> Jumeirah Golf Estates </option>
+        <option value="Al Furjan"> Al Furjan </option>
+        <option value="Discovery Gardens"> Discovery Gardens </option>
+        <option value="Energy"> Energy </option>
+        <option value="Danube"> Danube </option>
+        <option value="UAE Exchange"> UAE Exchange </option>
+      </select>
+      </div>
+
+      <div id='divider'></div>
+
+      <div id="selectOptions">
+        <p>Your destination</p>
+      <select class="selectElem"  name="destination" id="destination" required>
+        <option value="Etisalat by E&"> Etisalat by E& </option>
+        <option value="Al Qusais"> Al Qusais </option>
+        <option value="Dubai Airport freezone"> Dubai Airport freezone </option>
+        <option value="Al Nahda"> Al Nahda </option>
+        <option value="Stadium"> Stadium </option>
+        <option value="Al Qiyadah"> Al Qiyadah </option>
+        <option value="Abu Hail"> Abu Hail </option>
+        <option value="Abubakar Al Siddique"> Abubakar Al Siddique </option>
+        <option value="Salahuddin"> Salahuddin </option>
+        <option value="Union"> Union </option>
+        <option value="Center point"> Center point </option>
+        <option value="Emirates"> Emirates </option>
+        <option value="Airport Terminal 3"> Airport Terminal 3 </option>
+        <option value="Airport Terminal 1"> Airport Terminal 1 </option>
+        <option value="GGICO"> GGICO </option>
+        <option value="City Center Deira"> City Center Deira </option>
+        <option value="Al Rigga"> Al Rigga </option>
+        <option value="Union"> Union </option>
+        <option value="Baniyas Square"> Baniyas Square </option>
+        <option value="Gold Souk"> Gold Souk </option>
+        <option value="Al Ras"> Al Ras </option>
+        <option value="Creek"> Creek </option>
+        <option value="Jaddaf"> Jaddaf </option>
+        <option value="Healthcare City"> Healthcare City </option>
+        <option value="Oud Metha"> Oud Metha </option>
+        <option value="Burjuman"> Burjuman </option>
+        <option value="ADCB"> ADCB </option>
+        <option value="Max Fashion"> Max Fashion </option>
+        <option value="World Trade Center"> World Trade Center </option>
+        <option value="Emirates Center"> Emirates Center </option>
+        <option value="Financial Center"> Financial Center </option>
+        <option value="Dubai Mall / Burj Khalifa"> Dubai Mall / Burj Khalifa </option>
+        <option value="Business Bay"> Business Bay </option>
+        <option value="Sharaf DG"> Sharaf DG </option>
+        <option value="Al Ghubaiba"> Al Ghubaiba </option>
+        <option value="ONPassive"> ONPassive </option>
+        <option value="Equiti"> Equiti </option>
+        <option value="Mall of the Emirates"> Mall of the Emirates </option>
+        <option value="Mashreq"> Mashreq </option>
+        <option value="Dubai Internet City"> Dubai Internet City </option>
+        <option value="Al Khail"> Al Khail </option>
+        <option value="Sobha Realty"> Sobha Realty </option>
+        <option value="DMCC (JLT)"> DMCC (JLT) </option>
+        <option value="Jebel Ali"> Jebel Ali </option>
+        <option value="IBN Batuta"> IBN Batuta </option>
+        <option value="The Gardens"> The Gardens </option>
+        <option value="Expo2020"> Expo2020 </option>
+        <option value="Dubai Investment Park"> Dubai Investment Park </option>
+        <option value="Jumeirah Golf Estates"> Jumeirah Golf Estates </option>
+        <option value="Al Furjan"> Al Furjan </option>
+        <option value="Discovery Gardens"> Discovery Gardens </option>
+        <option value="Energy"> Energy </option>
+        <option value="Danube"> Danube </option>
+        <option value="UAE Exchange"> UAE Exchange </option>
+      </select>
+      </div>
+      <!-- Destination input field -->
+      <button type="submit">Calculate</button>
+    </form>
+  </div>
+
+
+</body>
+
+</html>

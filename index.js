@@ -63,10 +63,3 @@ function findStationZone(starting, destination, card) {
     }
   }
 console.log(findStationZone("dubai internet city", "al nahda", 'gold'))
- 
-
-
-
-
-
-  
