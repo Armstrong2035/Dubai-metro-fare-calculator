@@ -4,24 +4,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>Dubai metro fare calculator</title>
+  <title>Dubai metro calculator</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
-
 </head>
 
 <body>
-  <!-- Creating the form -->
-  <div id="mainContainer">
-    <header>
-      <h1> Dubai Metro Fare Calculator </h1>
-         </header>
-    <div id="header-image">
-      </div>
-    <form action="index.html" method="GET">
-      <!-- Starting point input field -->
-      <div id="selectOptions">
-        <p>Your starting point</p>
-      <select class="selectElem" name="starting point" id="starting" required>
+  <div id='starting'>
+    <h3 id="location1">Starting point</h3>
+    <form>
+      <select>
         <option value="Etisalat by E&"> Etisalat by E& </option>
         <option value="Al Qusais"> Al Qusais </option>
         <option value="Dubai Airport freezone"> Dubai Airport freezone </option>
@@ -77,13 +68,14 @@
         <option value="Danube"> Danube </option>
         <option value="UAE Exchange"> UAE Exchange </option>
       </select>
-      </div>
 
-      <div id='divider'></div>
+    </form>   
+  </div>
 
-      <div id="selectOptions">
-        <p>Your destination</p>
-      <select class="selectElem"  name="destination" id="destination" required>
+  <div id='destination'> 
+    <h3 id="location2"> Destination </h3>
+    <form>
+      <select>
         <option value="Etisalat by E&"> Etisalat by E& </option>
         <option value="Al Qusais"> Al Qusais </option>
         <option value="Dubai Airport freezone"> Dubai Airport freezone </option>
@@ -98,7 +90,7 @@
         <option value="Emirates"> Emirates </option>
         <option value="Airport Terminal 3"> Airport Terminal 3 </option>
         <option value="Airport Terminal 1"> Airport Terminal 1 </option>
-        <option value="GGICO"> GGICO </option>
+        <option value="GGICO"> GGICO"> </option>
         <option value="City Center Deira"> City Center Deira </option>
         <option value="Al Rigga"> Al Rigga </option>
         <option value="Union"> Union </option>
@@ -126,7 +118,7 @@
         <option value="Dubai Internet City"> Dubai Internet City </option>
         <option value="Al Khail"> Al Khail </option>
         <option value="Sobha Realty"> Sobha Realty </option>
-        <option value="DMCC (JLT)"> DMCC (JLT) </option>
+        <option value="DMCC (JLT)">DMCC (JLT) </option>
         <option value="Jebel Ali"> Jebel Ali </option>
         <option value="IBN Batuta"> IBN Batuta </option>
         <option value="The Gardens"> The Gardens </option>
@@ -139,13 +131,9 @@
         <option value="Danube"> Danube </option>
         <option value="UAE Exchange"> UAE Exchange </option>
       </select>
-      </div>
-      <!-- Destination input field -->
-      <button type="submit">Calculate</button>
     </form>
   </div>
-
-
+  <!--
 </body>
 
 </html>
