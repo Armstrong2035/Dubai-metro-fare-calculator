@@ -26,13 +26,13 @@ html {
 #location1 {
   color: white;
   position: relative;
-  bottom: 1.5rem;
+  bottom: 1rem;
 }
 
 #location2 {
   color: black;
   position: relative;
-  bottom: 1.5rem;
+  bottom: 1rem;
 }
 
 #starting form #destination form {
@@ -46,4 +46,34 @@ html {
 }
 
 
-  
+#submit {
+  background-color: #e25707;
+  border: 1rem solid #e25707;
+  border-radius: 15px;
+  margin: 2rem 2rem;
+  padding: 1rem; 
+  min-width: 5rem;
+  display: flexbox;
+  justify-content: center;
+}  
+
+#submit h3{
+  color: white;
+  position: relative;
+  bottom: 1rem;
+}
+
+#submit select{
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+}
+
+button {
+  padding: 0.5rem 6rem;
+  border-radius: 10px;
+  border: 1px solid white;
+  margin: 1rem;
+  position: relative;
+  top: 2rem;
+  right: 1rem
+}
