@@ -6,13 +6,14 @@
   <meta name="viewport" content="width=device-width">
   <title>Dubai metro calculator</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
+  <script src="script.js"></script>
 </head>
 
 <body>
   <div id='starting'>
     <h3 id="location1">Starting point</h3>
     <form>
-      <select>
+      <select id="startingPoint">
         <option value="Etisalat by E&"> Etisalat by E& </option>
         <option value="Al Qusais"> Al Qusais </option>
         <option value="Dubai Airport freezone"> Dubai Airport freezone </option>
@@ -75,7 +76,7 @@
   <div id='destination'> 
     <h3 id="location2"> Destination </h3>
     <form>
-      <select>
+      <select id="destinationPoint">
         <option value="Etisalat by E&"> Etisalat by E& </option>
         <option value="Al Qusais"> Al Qusais </option>
         <option value="Dubai Airport freezone"> Dubai Airport freezone </option>
@@ -137,13 +138,13 @@
   <div id="submit">
     <h3> Nol card class</h3>
     <form>
-      <select>
+      <select id="nolCard">
         <option value="Gold"> Gold Card </option>
         <option value="Silver"> Silver Card </option>
       </select>
     </form>
 
-    <button> Calculate fare </button>
+    <button id="calculateFareButton"> Calculate fare </button>
 
 
 

@@ -44,6 +44,14 @@ html {
   padding: 0.5rem 1rem;
   border-radius: 10px;
 }
+#starting select {
+  border-color: #008B76;
+}
+
+#destination select{
+  border-color:#FFEBDB;
+}
+
 
 
 #submit {

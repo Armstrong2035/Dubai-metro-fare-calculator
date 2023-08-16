@@ -1,4 +1,4 @@
-dubaiStations = [
+const dubaiStations = [
     [ "etisalat", "al qusais", "dubai airport freezone", "al nahda", "stadium",
     "al qiyadah", "abu hail", "abubakar al siddique", "salahuddin", "union",
     "center point", "emirates", "airport terminal 3", "airport terminal 1",
@@ -13,53 +13,48 @@ dubaiStations = [
   
 ["expo2020", "dubai investment park", "jumeirah golf estates", "al furjan",
     "discovery gardens", "energy", "danube", "uae exchange"]
-]
+];
 
 function findStationZone(starting, destination, card) {
     let startingZone = 0;
-    let destinationZone = 0 ;
+    let destinationZone = 0;
 
-    for (let i = 0; i < dubaiStations.length; i++){
-        if(dubaiStations[i].includes(starting)){
+    for (let i = 0; i < dubaiStations.length; i++) {
+        if (dubaiStations[i].includes(starting.toLowerCase())) {
             startingZone = i;
         }
     }
-    for (let j = 0; j < dubaiStations.length; j++){
-        if(dubaiStations[j].includes(destination)){
+
+    for (let j = 0; j < dubaiStations.length; j++) {
+        if (dubaiStations[j].includes(destination.toLowerCase())) {
             destinationZone = j;
         }
     }
-    if(Math.abs(destinationZone - startingZone) === 3){
-        if (card === 'silver'){
-            return 7.5;
-        }
-        else if (card === 'gold'){
-            return 15;
-        }
+
+    let zonesApart = Math.abs(destinationZone - startingZone);
+
+    switch(zonesApart) {
+        case 0: return (card === 'silver') ? 3 : 6;
+        case 1: return (card === 'silver') ? 5 : 10;
+        case 2:
+        case 3: return (card === 'silver') ? 7.5 : 15;
+        default: return 0; // handle an unexpected case, though this shouldn't happen
     }
-    else if (Math.abs(destinationZone - startingZone) === 2){
-        if (card === 'silver'){
-            return 7.5;
-        }
-        else if (card === 'gold'){
-            return 15;
-        }
+}
+
+function getSelectedValues() {
+    return {
+        starting: document.getElementById("startingPoint").value,
+        destination: document.getElementById("destinationPoint").value,
+        card: document.getElementById("nolCard").value
     }
-    else if (Math.abs(destinationZone - startingZone) === 1){
-        if (card === 'silver') {
-            return 5;
-        }
-        else if (card === 'gold'){
-            return 10;
-        }
-    }
-    else if (Math.abs(destinationZone - startingZone) === 0){
-        if (card === 'silver'){
-            return 3;
-        }
-        else if (card === 'gold'){
-            return 6;
-        }
-    }
-  }
-console.log(findStationZone("dubai internet city", "al nahda", 'gold'))
+}
+
+window.addEventListener('load', () => {
+    const button = document.getElementById('calculateFareButton');
+    button.addEventListener('click', () => {
+        const { starting, destination, card } = getSelectedValues();
+        const finalValue = findStationZone(starting, destination, card);
+        console.log(finalValue);
+    });
+});
