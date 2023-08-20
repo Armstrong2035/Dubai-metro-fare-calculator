@@ -6,7 +6,7 @@ const dubaiStations = [
     "gold souk", "al ras"],
   ["creek", "jaddaf", "healthcare city", "oud metha", "burjuman", "adcb",
     "max fashion", "world trade center", "emirates center", "financial center",
-    "dubai mall", "burj khalifa", "business bay", "sharaf dg", "al ghubaiba"],
+    "dubai mall / burj khalifa", "business bay", "sharaf dg", "al ghubaiba"],
  ["onpassive", "equiti", "mall of the emirates", "mashreq",
     "dubai internet city", "al khail", "sobha realty", "dmcc", "jlt",
     "jebel ali", "ibn batuta", "the gardens"],
@@ -34,10 +34,18 @@ function findStationZone(starting, destination, card) {
     let zonesApart = Math.abs(destinationZone - startingZone);
 
     switch(zonesApart) {
-        case 0: return (card === 'silver') ? 3 : 6;
-        case 1: return (card === 'silver') ? 5 : 10;
+        case 0: 
+            if (card === 'Silver') {return 3}
+            else if (card === 'Gold') {return 6}
+        case 1:
+            if (card === 'Silver') {return 5}
+            else if (card === 'Gold') {return 10}
         case 2:
-        case 3: return (card === 'silver') ? 7.5 : 15;
+            if (card === 'Silver') {return 7.5}
+            else if (card === 'Gold') {return 15}
+        case 3:
+            if (card === 'Silver') {return 7.5}
+            else if (card === 'Gold') {return 15}
         default: return 0; // handle an unexpected case, though this shouldn't happen
     }
 }
