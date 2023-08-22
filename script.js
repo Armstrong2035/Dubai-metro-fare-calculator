@@ -58,11 +58,33 @@ function getSelectedValues() {
     }
 }
 
+const popUpButton = document.getElementById('popupbutton');
+    popUpButton.addEventListener('click', () => {
+        popUpBox.style.display = 'none';
+    });
+
 window.addEventListener('load', () => {
     const button = document.getElementById('calculateFareButton');
+    const popUpBox = document.getElementById('popupbox');
+    const theFare = document.getElementById('fare');
+
+
     button.addEventListener('click', () => {
         const { starting, destination, card } = getSelectedValues();
         const finalValue = findStationZone(starting, destination, card);
-        console.log(finalValue);
+        printedValue = `The fare is ${finalValue} AED`;
+        theFare.innerHTML = printedValue;
+        popUpBox.style.display = 'block';   
     });
 });
+
+
+
+
+
+
+
+
+
+
+
