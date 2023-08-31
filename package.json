@@ -1,0 +1,22 @@
+{
+  "name": "dubai-metro-fare-calculator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Armstrong2035/Dubai-metro-fare-calculator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Armstrong2035/Dubai-metro-fare-calculator/issues"
+  },
+  "homepage": "https://github.com/Armstrong2035/Dubai-metro-fare-calculator#readme",
+  "devDependencies": {
+    "mocha": "^10.2.0"
+  }
+}

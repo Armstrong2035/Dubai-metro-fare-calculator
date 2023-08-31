@@ -58,10 +58,6 @@ function getSelectedValues() {
     }
 }
 
-const popUpButton = document.getElementById('popupbutton');
-    popUpButton.addEventListener('click', () => {
-        popUpBox.style.display = 'none';
-    });
 
 window.addEventListener('load', () => {
     const button = document.getElementById('calculateFareButton');
@@ -75,6 +71,11 @@ window.addEventListener('load', () => {
         printedValue = `The fare is ${finalValue} AED`;
         theFare.innerHTML = printedValue;
         popUpBox.style.display = 'block';   
+    });
+
+    const popUpButton = document.getElementById('popupbutton');
+    popUpButton.addEventListener('click', () => {
+        popUpBox.style.display = 'none';
     });
 });
 
